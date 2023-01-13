@@ -36,6 +36,10 @@ const app = Vue.createApp({
 
             cleanNewTask () {
                 this.newTasks = '';
-            }   
+            },
+            
+            deleteTask (index) {
+                this.items.splice(index, 1)
+            }
         }
 }).mount('#root');
