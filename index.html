@@ -34,13 +34,13 @@
                 <div id="to-do-list" class="col-8">
                     <img src="https://hiringplatform.boolean.careers/images/logo.png" alt="logo-boolean" class="img-fluid">
                     <div class="input-group mb-3 my-3">
-                        <input type="text" class="form-control" placeholder="Task da fare" v-model="task">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask()">Inserisci task</button>
+                        <input type="text" class="form-control" placeholder="Task da fare" v-model="newTasks">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTasks">Inserisci task</button>
                     </div>
                     <ul>
                         <li v-for="(item, i) in items" class="d-flex justify-content-center">
                             <p class="col-6 text-center">{{item.text}}</p>
-                            <button type="button" class=" col-2 btn-close" @click="deleteTask()"></button>
+                            <button type="button" class=" col-2 btn-close" @click="deleteTask(i)"></button>
                         </li>
                     </ul>
                 </div>

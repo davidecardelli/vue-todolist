@@ -4,7 +4,7 @@ const app = Vue.createApp({
 
     data(){
       return {
-        task: '',
+        newTasks: '',
         items: [
         {
           text: 'Comprare pane',
@@ -25,6 +25,12 @@ const app = Vue.createApp({
         ]}
     },
          methods: {
-
-    },
+            addTasks() {
+                const task = {
+                    text: this.newTasks,
+                    done: false,
+                }
+                this.items.push(task)
+            }
+        }
 }).mount('#root');
