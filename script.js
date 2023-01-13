@@ -30,7 +30,12 @@ const app = Vue.createApp({
                     text: this.newTasks,
                     done: false,
                 }
-                this.items.push(task)
-            }
+                this.items.push(task),
+                this.cleanNewTask()
+            },
+
+            cleanNewTask () {
+                this.newTasks = '';
+            }   
         }
 }).mount('#root');
