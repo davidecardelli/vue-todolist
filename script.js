@@ -4,7 +4,7 @@ const app = Vue.createApp({
 
     data(){
       return {
-        tasks: '',
+        task: '',
         items: [
         {
           text: 'Comprare pane',
