@@ -34,7 +34,7 @@
                 <div id="to-do-list" class="col-8">
                     <img src="https://hiringplatform.boolean.careers/images/logo.png" alt="logo-boolean" class="img-fluid">
                     <div class="input-group mb-3 my-3">
-                        <input type="text" class="form-control" placeholder="Task da fare" v-model="newTasks">
+                        <input type="text" class="form-control" placeholder="Task da fare" v-model="newTasks" @keyup.enter="addTasks">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTasks">Inserisci task</button>
                     </div>
                     <ul>
